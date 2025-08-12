@@ -13,7 +13,7 @@ pipeline {
         // Step 2: Deploy the index.html file
         stage('Deploy HTML File') {
             steps {
-                sh '''
+                sh 'sudo cp index.html /var/www/html/'
                 # Deploy index.html to the web server directory (e.g., /var/www/html)
                 cp index.html /var/www/html/
                 '''
